@@ -5,33 +5,33 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter the first number: ");
-        int num1 = sc.nextInt();
+        float num1 = sc.nextFloat();
 
         System.out.print("Enter the second number: ");
-        int num2 = sc.nextInt();
+        float num2 = sc.nextFloat();
 
         System.out.print("Enter the third number: ");
-        int num3 = sc.nextInt();
+        float num3 = sc.nextFloat();
 
         MaxNumber maxObj = new MaxNumber();
-        int maxi = maxObj.testMax(num1, num2, num3);
+        float maxi = maxObj.testMax(num1, num2, num3);
         System.out.println("Maximum number is " + maxi);
         sc.close();
     }
 }
 
 class MaxNumber {
-    public int testMax(int num1, int num2, int num3) {
-        Integer maxx = Integer.valueOf(num1);
+    public float testMax(float num1, float num2, float num3) {
+        Float maxx = Float.valueOf(num1);
 
-        if (Integer.valueOf(num2).compareTo(maxx) > 0) {
-            maxx = Integer.valueOf(num2);
+        if (Float.valueOf(num2).compareTo(maxx) > 0) {
+            maxx = Float.valueOf(num2);
         }
 
-        if (Integer.valueOf(num3).compareTo(maxx) > 0) {
-            maxx = Integer.valueOf(num3);
+        if (Float.valueOf(num3).compareTo(maxx) > 0) {
+            maxx = Float.valueOf(num3);
         }
 
-        return maxx.intValue();
+        return maxx.floatValue();
     }
 }
